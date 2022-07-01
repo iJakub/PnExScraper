@@ -8,7 +8,7 @@ for request in range(int(numberentry)):
     number += 1
     url = "https://thispersondoesnotexist.com/image"
     r = requests.get(url, allow_redirects=True)
-    open("{0}.png".format(number), "wb").write(r.content)
-    print("[{0}] downloaded...".format(number))
+    open(f"{number}.png", "wb").write(r.content)
+    print(f"[{number}] downloaded...")
 
     time.sleep(5) #time between requests
